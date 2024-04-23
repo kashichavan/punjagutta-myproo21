@@ -1,0 +1,49 @@
+Segreating views and urls wrto each application:
+--------------------------------------------------
+
+step 1: create a project
+
+step 2: create a application
+
+step 3: register the application
+
+step 4: create your own views inside views.py wr to each application
+
+step 5: create a urls.py file with respect to each application
+
+steep 6: define all urls of each appliaction inside urls.py with connecting view
+	
+from django.urls import path
+from .views import *
+urlpatterns = [
+    path('myapp11/',v1),
+    path('myapp12/',v2),
+    path('myapp13/',v3),
+]
+
+
+step 7: go to urls.py wrto project level and import include
+
+step 8: create url pattern and include all the urls of particular application.
+
+	 path('pattern/',include('appName.urls')),
+
+
+patterns/url
+
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('myapp1/',include('myapp1.urls')),
+    path('myapp2/',include('myapp2.urls')),
+    path('myapp3/',include('myapp3.urls')),
+    
+
+]
+
+step 9: runserver
+
+ 
